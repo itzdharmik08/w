@@ -1,0 +1,242 @@
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Shutter Studios >> Log in </title>
+    <link rel="stylesheet" href="demo.css">
+    <link href="bootstrap.min.css" rel="stylesheet">
+		<style>
+			.form-control
+			{
+				width:200px;
+			}
+			.container
+			{
+				margin-left:250px;
+			}
+			.txt
+			{
+				margin:10px;
+			}
+		</style>
+		<script language="javascript">
+			function val(event)
+			{
+				var name=document.getElementById("nm").value;
+				var pass=document.getElementById("pwd").value;
+				if(name=="admin" && pass=="12345")
+				{
+					alert("Login Successful!!")
+				}
+				else
+				{
+					event.preventDefault();
+					document.getElementById("err").innerHTML="Invalid Id";
+					document.getElementById("err1").innerHTML="Invalid Password";
+				}
+			}
+		
+		</script>
+</head>
+<body>
+<div id="header">
+    <ul id="menu">
+        <li class="site_name"><a href="demo1.html">Shutter Studios</a></li>
+    </ul>
+</div>
+<div id="contents">
+    
+
+
+    <div class="container">
+        <div class=" text-info"><h1>LOGIN</h1></div>
+   
+        <form class="form form-horizontal" onsubmit="val(event);" method="post" action="demo.html" >
+            <div class="form-group">
+                <label for="nm" class="txt">USER ID:</label>
+                <input type="text" id="nm" class="form-control" placeholder="Enter User Id"><label id="err"></label>
+            </div>
+            <div class="form-group">
+                <label for="pwd" class="txt">PASSWORD:</label>
+                <input type="text" id="pwd" class="form-control" placeholder="Enter Password"><label id="err1"></label>
+            </div>
+            <div>
+                <div class="txt"><input type="submit" value="submit" class=" btn btn-secondary"></div>
+            </div>
+        </form>
+        </div>
+    </div>
+</div>
+  
+
+<div id="footer">
+    &copy; Shutter Studios All rights reserved.
+</div>
+  
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script>
+$(function(){
+    // Click the link starting with #
+    $('a[href^="#"]').click(function(){
+         
+        // Scroll speed (ms)
+        var speed = 500;
+         
+        // Get href
+        var href = $(this).attr("href");
+         
+        // Change backcolor
+        $(".link").css('background-color', 'navy');
+         
+        if (href != "#contents") {
+            $(this).parent("li").css('background-color', 'lightseagreen');
+        }
+         
+        // Set target
+        var target = $(href == "#" || href == "" ? "html" : href);
+         
+        // Get the position of target
+        var position = target.offset().top;
+         
+        // Start animation
+        $("body,html").animate({scrollTop:position}, speed, 'swing');
+         
+        return false;
+    });     
+});
+</script>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+-->
+<html>
+<head>
+	<title>YOUTUBE</title>
+	<link rel="stylesheet" href="demo1.css">
+    <!-- <link href="bootstrap.min.css" rel="stylesheet"> -->
+    <!-- <style> -->
+        <!-- .form-control -->
+        <!-- { -->
+            <!-- width:200px; -->
+        <!-- } -->
+        <!-- .container -->
+        <!-- { -->
+            <!-- margin-left:325px; -->
+        <!-- } -->
+        <!-- .txt -->
+        <!-- { -->
+            <!-- margin:10px; -->
+        <!-- } -->
+    <!-- </style> -->
+    <!-- <script language="javascript"> -->
+        <!-- function val(event) -->
+        <!-- { -->
+            <!-- var name=document.getElementById("nm").value; -->
+            <!-- var pass=document.getElementById("pwd").value; -->
+            <!-- if(name=="admin" && pass=="12345") -->
+            <!-- { -->
+                <!-- alert("Login Successful!!") -->
+            <!-- } -->
+            <!-- else -->
+            <!-- { -->
+                <!-- event.preventDefault(); -->
+                <!-- document.getElementById("err").innerHTML="Invalid Id"; -->
+                <!-- document.getElementById("err1").innerHTML="Invalid Password"; -->
+            <!-- } -->
+        <!-- } -->
+    
+    <!-- </script> -->
+	 <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+        <script>
+            $(document).ready(function()
+            {
+                $("#sub").click(function()
+                {
+                    var name=document.getElementById("name").value; 
+                    var pass=document.getElementById("pwd").value; 
+
+                    var xmlhttp=new XMLHttpRequest();
+                    xmlhttp.open("GET","address.xml",false);
+                    xmlhttp.send();
+                    var xmlDoc=xmlhttp.responseXML;
+                    var xnm=xmlDoc.getElementsByTagName("username")[0].childNodes[0].nodeValue;
+                    var xpwd=xmlDoc.getElementsByTagName("password")[0].childNodes[0].nodeValue;
+                    if(xnm==name && xpwd==pass)
+                    {
+                        alert("logged in");
+                    }
+                    else
+                    {
+                        alert("login fail");
+                    }
+                });
+            });
+            
+            
+            
+            </script>
+</head>
+<body bgcolor= #a4ffe6>
+<nav>
+	<input id="nav-toggle" type="checkbox">
+	<div class="logo">MINZ<strong>CODE</strong></div>
+	<ul class="links">
+		<li><a href="demo1.html">Home</a></li>
+		<li><a href="login1.html">login</a></li>
+		<li><a href="#work">Registration</a></li>
+		<li><a href="#projects">About</a></li>
+		<li><a href="contact.html">Contact</a></li>
+	</ul>
+	<label for="nav-toggle" class="icon-burger">
+		<div class="line"></div>
+		<div class="line"></div>
+		<div class="line"></div>
+	</label>
+</nav>
+
+<div class="container">
+    <div id="contents">
+        <!--body-->
+    
+    
+        <div class="container">
+            <div class=" text-info"><center><h1>LOGIN</h1></center></div>
+       
+            <form  onsubmit="val(event);" method="post" action="#" >
+			<center>
+                <div class="form-group">
+                    <label for="nm" >USER ID:</label>
+                    <input type="text" id="nm"  placeholder="Enter User Id"><label id="err"></label><br>
+                </div>
+                <div class="form-group">
+                    <label for="pwd" >PASSWORD:</label>
+                    <input type="text" id="pwd"  placeholder="Enter Password"><label id="err1"></label><br>
+                </div>
+                <div>
+                    <div><input type="submit" value="submit" id="sub" ></div>
+					<div><input type="reset" value="Reset" id="res" ></div>
+                </div>
+				</center>
+            </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>

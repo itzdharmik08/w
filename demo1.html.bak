@@ -1,0 +1,81 @@
+<html>
+<head>
+	<title>The Papered Wall</title>
+	<link rel="stylesheet" href="demo1.css">
+	<link rel="javascript" href="demo1.js">
+	<link rel="shortcut icon" href="2.png">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body bgcolor="#a4ffe6">
+<nav>
+	<input id="nav-toggle" type="checkbox">
+	<div class="logo"><strong>The Papered Wall</strong></div>
+	<ul class="links">
+		<li><a href="#">Home</a></li>
+		<li><a href="login.html">login</a></li>
+		<li><a href="#work">Registration</a></li>
+		<li><a href="#projects">About</a></li>
+		<li><a href="#contact">Contact</a></li>
+	</ul>
+	<label for="nav-toggle" class="icon-burger">
+		<div class="line"></div>
+		<div class="line"></div>
+		<div class="line"></div>
+	</label>
+</nav>
+
+<div class="slider">
+   <img src="https://c4.wallpaperflare.com/wallpaper/947/702/550/daredevil-marvel-comics-wallpaper-preview.jpg" alt="Image 1" height="500" width="auto" class="active">
+
+  <img src="https://prod.assets.earlygamecdn.com/images/DC-Characters.jpeg?mtime=1672398084" height="500" width="auto" alt="Image 2">
+  <img src="https://c4.wallpaperflare.com/wallpaper/384/350/430/digital-art-artwork-cyber-cyberpunk-neon-hd-wallpaper-preview.jpg" height="500" width="auto" alt="Image 3">
+  <img src="https://c4.wallpaperflare.com/wallpaper/156/283/658/x-men-x-men-days-of-future-past-wolverine-magneto-wallpaper-preview.jpg" height="500" width="auto" alt="Image 3">
+  <img src="https://c4.wallpaperflare.com/wallpaper/384/818/513/himalayas-mountains-landscape-nature-wallpaper-preview.jpg" height="500" width="auto" alt="Image 3">
+  
+</div>
+
+<hr>
+
+<div>
+	<center><h1>𝖲𝗎𝗉𝖾𝗋𝖧𝖾𝗋𝗈𝗌 𝖶𝖺𝗅𝗅𝖯𝖺𝗉𝖾𝗋𝗌</h1></center>
+</div>
+
+<div>
+  <a href="marvel.html" > <img src="https://c4.wallpaperflare.com/wallpaper/947/702/550/daredevil-marvel-comics-wallpaper-preview.jpg" alt="Avatar" class="image"></a>
+  <a href="marvel.html" > <img src="https://prod.assets.earlygamecdn.com/images/DC-Characters.jpeg?mtime=1672398084" alt="Avatar" class="image"></a>
+  <a href="marvel.html" > <img src="https://c4.wallpaperflare.com/wallpaper/384/350/430/digital-art-artwork-cyber-cyberpunk-neon-hd-wallpaper-preview.jpg" alt="Avatar" class="image"></a>
+  <a href="marvel.html" > <img src="https://c4.wallpaperflare.com/wallpaper/156/283/658/x-men-x-men-days-of-future-past-wolverine-magneto-wallpaper-preview.jpg 	" alt="Avatar" class="image"></a>
+  <a href="marvel.html" > <img src="https://c4.wallpaperflare.com/wallpaper/384/818/513/himalayas-mountains-landscape-nature-wallpaper-preview.jpg" alt="Avatar" class="image"></a>  
+</div>
+
+<div>
+	<center><h1>𝖬𝗂𝗑 𝖶𝖺𝗅𝗅𝗉𝖺𝗉𝖾𝗋</h1></center>
+</div>
+
+	
+<script>
+
+let slideIndex = -1;
+
+function showSlides() {
+    const slides = document.querySelectorAll('.slider img');
+    
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].classList.remove('active');
+    }
+    
+    slideIndex++;
+    
+    if (slideIndex >= slides.length) {
+        slideIndex = 0;
+    }
+    
+    slides[slideIndex].classList.add('active');
+    
+    setTimeout(showSlides, 3000);
+}
+
+showSlides();
+</script>
+</body>
+</html>
