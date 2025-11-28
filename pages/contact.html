@@ -1,0 +1,118 @@
+<html>
+
+<head>
+  <title>The Papered Wall &#8594; Contact </title>
+  <link rel="stylesheet" href="../assets/css/demo1.css">
+  <link rel="shortcut icon" href="../assets/images/2.png">
+  <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Shantell+Sans:wght@300&display=swap" rel="stylesheet">
+  <style>
+    .container {
+      width: 50%;
+      margin: auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+    }
+
+    /* Style for input fields */
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    input[type=text],
+    textarea {
+      width: 100%;
+      padding: 12px;
+      border-radius: 4px;
+      border: none;
+      background-color: #f8f8f8;
+      margin-bottom: 20px;
+    }
+
+    /* Style for submit button */
+    input[type=submit] {
+      background-color: #4CAF50;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 4px;
+      border: none;
+    }
+
+    /* Hover effect on submit button */
+    input[type=submit]:hover {
+      background-color: #45a049;
+      cursor: pointer;
+    }
+
+    /* Style for heading */
+    h2 {
+      text-align: center;
+      font-size: 30px;
+      margin-bottom: 30px;
+    }
+
+    /* Media query for responsive design */
+    @media screen and (max-width :600px) {
+      .container {
+        width: 80%;
+      }
+    }
+  </style>
+</head>
+
+<body bgcolor=#a4ffe6>
+  <nav>
+    <input id="nav-toggle" type="checkbox">
+    <div class="logo"><strong>The Papered Wall</strong></div>
+    <ul class="links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="login1.html">login</a></li>
+      <li><a href="Registration.html">Registration</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <label for="nav-toggle" class="icon-burger">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </label>
+  </nav>
+  <br><br><br>
+  <div class="container">
+    <div id="contents">
+      <h2>Contact Us</h2>
+
+      <form action="#" method="post">
+
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name">
+
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email" placeholder="Enter your email">
+
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject" name="subject" placeholder="Enter subject">
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message"></textarea>
+
+        <input type="submit" value="Submit">
+
+      </form>
+
+
+
+    </div>
+  </div>
+  <br><br>
+  <footer>
+    <p>&copy; 2023 All rights reserved.</p>
+  </footer>
+
+</body>
+
+</html>
